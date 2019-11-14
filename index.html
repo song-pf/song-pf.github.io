@@ -1,18 +1,40 @@
-vagrant 导出自己的box
+<html>
+    <h3>
+        vagrant 导出自己的box
+    </h3>
 
-我们搭了一套自己的虚拟环境，当需要在另一台机器上搭建相同的环境时，可以在源主机导出box，再在目的主机导入。
+    <body>
+        <p>
+            我们搭了一套自己的虚拟环境，当需要在另一台机器上搭建相同的环境时，可以在源主机导出box，再在目的主机导入。
+        </p>
+        
 
-操作流程如下：
+        <p>操作流程如下：</p>
+        
+        <p>
+            查看虚拟机列表
+        </p>
+       <p>
+        vboxmanage list vms
+       </p>
+        
+       <p>
+        打包
+       </p>
+       <p>
+        vagrant package --base box_name_1503366286622_12977--output ./ubuntu_amd64.box
+       </p>
+       <p>
+        参数说明：
+        
+        --base 要打包的虚拟机名称
+        --output 打包后的包名
+        -- include 打包需要增加的文件，多个文件以逗号分隔
+        --vagrantfile 指定vagrantfile文件
+        如果没有报错，会在当前文件夹下出现你指定名字、后缀为.box的文件，即导出成功。
+       </p>
+       
+    </body>
+</html>
 
-查看虚拟机列表
-vboxmanage list vms
 
-打包
-vagrant package --base box_name_1503366286622_12977--output ./ubuntu_amd64.box
-参数说明：
-
---base 要打包的虚拟机名称
---output 打包后的包名
--- include 打包需要增加的文件，多个文件以逗号分隔
---vagrantfile 指定vagrantfile文件
-如果没有报错，会在当前文件夹下出现你指定名字、后缀为.box的文件，即导出成功。
