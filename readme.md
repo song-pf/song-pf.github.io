@@ -2,8 +2,6 @@
 
 # 目录
 
-## 下面记录了一些常用的页面地址
+## 下面记录了一些常用的页面导航
 
-1.[vagrant add](/vagrant/add.html "vagrant 添加虚拟机")
-
-2.[vagrant package](/vagrant/package.html "vagrant 打包导出虚拟机")
+1.[vagrant相关](/vagrant/index.html "vagrant 相关")
