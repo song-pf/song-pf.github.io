@@ -15,7 +15,7 @@
         2.vagrant init
     </p>
     <p>
-        3. vim Vagrantfile 自行配置
+        3.vim Vagrantfile 自行配置
     </p>
     <p>
         4.vagrant up
@@ -24,14 +24,23 @@
     <p>
         常见问题：
     </p>
-    <p>
+    <div>
         1. ssh 登录验证失败超时问题：
-        vagrant ssh-config 得到秘钥路径
-        ssh-keygen -y -f xxx(私钥文件) 得到公钥数据
-        vagrant ssh 进入虚拟机
-        把得到的公钥数据写入 .ssh/authorized_keys 中
-        重启虚拟机
-    </p>
+        <ul>
+            <li>
+                vagrant ssh-config 得到秘钥路径
+            </li>
+            <li>ssh-keygen -y -f xxx(私钥文件) 得到公钥数据</li>
+            <li>vagrant ssh 进入虚拟机</li>
+            <li>把得到的公钥数据写入 .ssh/authorized_keys 中</li>
+            <li>重启虚拟机</li>
+        </ul>
+
+
+
+
+
+    </div>
 </body>
 
 </html>
