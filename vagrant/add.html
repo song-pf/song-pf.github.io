@@ -1,0 +1,37 @@
+<html>
+<h3>
+    vagrant 添加box
+</h3>
+
+<body>
+
+    <p>操作流程如下：</p>
+
+    <p>
+        1.vagrant box add vm_name box_path
+    </p>
+
+    <p>
+        2.vagrant init
+    </p>
+    <p>
+        3. vim Vagrantfile 自行配置
+    </p>
+    <p>
+        4.vagrant up
+    </p>
+
+    <p>
+        常见问题：
+    </p>
+    <p>
+        1. ssh 登录验证失败超时问题：
+        vagrant ssh-config 得到秘钥路径
+        ssh-keygen -y -f xxx(私钥文件) 得到公钥数据
+        vagrant ssh 进入虚拟机
+        把得到的公钥数据写入 .ssh/authorized_keys 中
+        重启虚拟机
+    </p>
+</body>
+
+</html>
