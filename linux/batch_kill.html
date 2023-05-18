@@ -1,0 +1,30 @@
+<html lang="">
+<h3>
+    通过ps、grep和kill批量杀死进程
+</h3>
+
+<body>
+
+<p>ps aux|grep php|grep -v grep | awk '{print $2}'|xargs kill -9</p>
+
+<p>
+    下面将这条命令作一下简单说明：
+</p>
+
+<p>
+    管道符"|"用来隔开两个命令，管道符左边命令的输出会作为管道符右边命令的输入。
+</p>
+<p>
+    "ps -aux" 是linux里查看所有进程的命令。这时检索出的进程将作为下一条命令"grep php"的输入。
+</p>
+<p>
+    awk的作用是输出某一列，{print $2}就是输出第二列，如上即是pid这一列。
+</p>
+
+<p>
+    "xargs kill -9" 中的 xargs 命令是用来把前面命令的输出结果（PID）作为"kill -9"命令的参数，并执行该命令。
+    "kill -9"会强行杀掉指定进程。
+</p>
+</body>
+
+</html>
